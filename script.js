@@ -6,18 +6,31 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "Você e suas amigas decidem sair no sabado para se divertirem. Em que lugar decidem ir?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "Shopping Palladium",
+            "Park Barigui"
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "Depois de decidirem o lugar onde vão, chegou sabado e é hora de se arrumar, está um dia lindo de sol. Qual roupa voce escolhe usar ?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "um vestido longo rosa com um tenis branco",
+            "uma calça jeans rasgada com um cropeed preto e um tenis preto"
+        ]
+    },
+    {
+        enunciado: "Depois de se vestir neste dia lindo de sol. Voce prefere qual maquiagem ?",
+        alternativas: [
+            "maquiagem mais basica (só corretivo de blush)",
+            "uma maquiagem mais pesada (com base, corretivo,contorno,iluminador e blush)"
+        ]
+    },
+    {
+        enunciado: "Depois de pronta voce e sua amiga saem de casa e se divertem muito mas, derepente sentem uma fome. Voces escolhem comer no lugar onde estão ou ir para outro lugar ?",
+        alternativas: [
+            "comer no lugar onde estão ",
+            "ir para outro lugar"
         ]
     }
-]; 
-
+]
