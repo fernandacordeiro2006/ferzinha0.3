@@ -8,16 +8,32 @@ const perguntas = [
     {
         enunciado: "Você e suas amigas decidem sair no sabado para se divertirem. Em que lugar decidem ir?",
         alternativas: [
-            "Shopping Palladium",
-            "Park Barigui"
+            {
+                texto: "shopping palladium",
+                afirmacao: "parque barigui"
+            },
+            {
+                texto: "shopping palladium",
+                afirmacao: "parque barigui"
+            }
         ]
+},
+
     },
     {
         enunciado: "Depois de decidirem o lugar onde vão, chegou sabado e é hora de se arrumar, está um dia lindo de sol. Qual roupa voce escolhe usar ?",
         alternativas: [
-            "um vestido longo rosa com um tenis branco",
-            "uma calça jeans rasgada com um cropeed preto e um tenis preto"
+            {
+                texto: "Isso é assustador!",
+                afirmacao: "afirmacao"
+            },
+            {
+                texto: "Isso é maravilhoso!",
+                afirmacao: "afirmacao"
+            }
         ]
+},
+
     },
     {
         enunciado: "Depois de se vestir neste dia lindo de sol. Voce prefere qual maquiagem ?",
