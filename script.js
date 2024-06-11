@@ -21,7 +21,7 @@ const perguntas = [
 
     },
     {
-        enunciado: "Depois de decidirem o lugar onde vão, chegou sabado e é hora de se arrumar, está um dia lindo de sol. Qual roupa voce escolhe usar ?",
+        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia"
         alternativas: [
             {
                 texto: "Isso é assustador!",
