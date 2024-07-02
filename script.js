@@ -9,12 +9,12 @@ const perguntas = [
         enunciado: "Você e suas amigas decidem sair no sabado para se divertirem. Em que lugar decidem ir?",
         alternativas: [
             {
-                texto: "shopping palladium",
+                texto: "parque barigui",
                 afirmacao: "parque barigui"
             },
             {
                 texto: "shopping palladium",
-                afirmacao: "parque barigui"
+                afirmacao: "shopping palladium"
             }
         ]
 
