@@ -8,58 +8,79 @@ const perguntas = [
     {
         enunciado: "Você e suas amigas decidem sair no sabado para se divertirem. Em que lugar decidem ir?",
         alternativas: [
-            {
-                texto: "parque barigui",
-                afirmacao: "parque barigui"
-            },
-            {
-                texto: "shopping palladium",
-                afirmacao: "shopping palladium"
-            }
+    {
+        texto: "parque barigui",
+        afirmacao: [
+            "parque barigui",
+            "elas foram para o parque barigui"
         ]
-
+    },
+    {
+        texto: "shopping palladium",
+        afirmacao: [
+            "shopping palladium",
+            "elas foram para o shopping palladium"
+        ]
+    }
+]
     },
     {
         enunciado: "Depois de decidirem o lugar onde vão, chegou sabado e é hora de se arrumar, está um dia lindo de sol. Qual roupa voce escolhe usar ?",
-        alternativas: [
-            {
-                texto: "um vestido longo rosa com um tenis branco ",
-                afirmacao: "uma calça jeans rasgada com um cropeed preto e um tenis preto"
-            },
-            {
-                texto: "um vestido longo rosa com um tenis branco ",
-                afirmacao: "uma calça jeans rasgada com um cropeed preto e um tenis preto"
-            }
-  
+       alternativas: [
+    {
+        texto: "um vestido longo rosa com umtenis branco",
+        afirmacao: [
+            "um vestido longo com um tenis branco",
+            "ela escolheu o vestido com o tenis"
         ]
+    },
+    {
+        texto: "uma calça jeans rasgada com cropeed preto",
+        afirmacao: [
+            "calça rasgada jeans com cropeed preto",
+            "ela escolheu a calça jeans e cropped preto"
+        ]
+    }
+]
     },
     {
         enunciado: "Depois de se vestir neste dia lindo de sol. Voce prefere qual maquiagem ?",
         alternativas: [
-            {
-                texto: "maquiagem mais basica (só corretivo de blush)",
-                afirmacao: "uma maquiagem mais pesada (com base, corretivo,contorno,iluminador e blush)"
-            },
-            {
-                texto: "maquiagem mais basica (só corretivo de blush)",
-                afirmacao: "uma maquiagem mais pesada (com base, corretivo,contorno,iluminador e blush)"
-            }
-          
+    {
+        texto: "maquiagem mais basica",
+        afirmacao: [
+            "maquiagem basica",
+            "ela escolheu uma maquiagem mais basica"
         ]
     },
     {
-        enunciado: "Depois de pronta voce e sua amiga saem de casa e se divertem muito mas, derepente sentem uma fome. Voces escolhem comer no lugar onde estão ou ir para outro lugar ?",
-        alternativas: [
-            {
-                texto: "comer no lugar onde estão ",
-                afirmacao: "ir para outro lugar "
-            },
-            {
-                texto: "comer no lugar onde estão ",
-                afirmacao: "ir para outro lugar "
-         }
-        ]    
+        texto: "maquiagem mais pesada",
+        afirmacao: [
+            "maquiagem mais pesada",
+            "ela escolheu a maquiagem mais pesada"
+        ]
     }
+]
+    },
+    {
+        enunciado: "Depois de pronta voce e sua amiga saem de casa e se divertem muito mas, derepente sentem uma fome. Voces escolhem comer no lugar onde estão ou ir para outro lugar ?",
+       alternativas: [
+    {
+        texto: "comer no lugar onde estão",
+        afirmacao: [
+            "comer onde estão",
+            "elas escolheram comer onde estavam"
+        ]
+    },
+    {
+        texto: "ir para outro lugar",
+        afirmacao: [
+            "comer em outro lugar",
+            "foram comer em outro lugar"
+         }
+           
+        ]    
+    },
 ];
 
 let atual = 0;
@@ -86,12 +107,11 @@ function mostraAlternativas() {
     }
 }
 
-
-function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " "; // Concatenar a afirmação selecionada na história final
-    atual++;
-    mostraPergunta();
+function respostaSelecionada(opcaoSelecionada){
+        const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+        historiaFinal += afirmacoes + " ";
+        atual++;
+        mostraPergunta();
 }
 
 function mostraResultado() {
@@ -100,5 +120,9 @@ function mostraResultado() {
     caixaAlternativas.textContent = ""; // Limpar alternativas
 }
 
+function aleatorio (lista){
+        const posicao = Math.floor(Math.random()* lista.length);
+        return lista[posicao];
+}
 
 mostraPergunta();
